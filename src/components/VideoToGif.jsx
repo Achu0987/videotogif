@@ -127,11 +127,11 @@ export default function VideoToGif() {
   };
 
   return (
-    <div className="flex flex-col items-center py-12 px-4 selection:bg-pink-100 w-full font-sans">
+    <div className="flex flex-col items-center py-8 md:py-12 px-4 selection:bg-pink-100 w-full font-sans">
       <div className="max-w-4xl w-full">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tight text-gray-900">
+        <div className="text-center mb-8 md:mb-12">
+          <h1 className="text-3xl md:text-5xl font-black mb-3 md:mb-4 tracking-tight text-gray-900">
             Convert Video to <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">GIF</span>
           </h1>
           <p className="text-gray-500 text-lg">Create high-quality looping GIFs instantly in your browser.</p>
@@ -143,7 +143,7 @@ export default function VideoToGif() {
             <p className="text-pink-500 font-medium animate-pulse">{loadingMsg}</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
             
             {/* Left Column: Upload & Preview */}
             <div className="space-y-6">
@@ -154,7 +154,7 @@ export default function VideoToGif() {
                   onChange={handleVideoUpload} 
                   className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
                 />
-                <div className="p-12 text-center flex flex-col items-center justify-center h-full min-h-[400px]">
+                <div className="p-6 md:p-12 text-center flex flex-col items-center justify-center h-full min-h-[300px] md:min-h-[400px]">
                   {videoUrl ? (
                     <video 
                       src={videoUrl} 
@@ -178,7 +178,7 @@ export default function VideoToGif() {
 
               {/* Progress & Convert Button */}
               {videoFile && (
-                <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm">
+                <div className="bg-white rounded-3xl p-5 md:p-6 border border-gray-100 shadow-sm">
                   <div className="flex flex-col gap-3">
                     <button 
                       onClick={convertToGif}
@@ -229,8 +229,8 @@ export default function VideoToGif() {
             <div className="space-y-6">
               
               {/* Settings Panel */}
-              <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm relative overflow-hidden group">
-                <h2 className="text-xl font-bold mb-6 text-gray-900 flex items-center gap-2">
+              <div className="bg-white rounded-3xl p-5 md:p-8 border border-gray-100 shadow-sm relative overflow-hidden group">
+                <h2 className="text-xl font-bold mb-5 md:mb-6 text-gray-900 flex items-center gap-2">
                   <svg className="w-5 h-5 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
                   </svg>
@@ -273,7 +273,7 @@ export default function VideoToGif() {
                   <hr className="border-gray-100" />
 
                   {/* FPS & Quality */}
-                  <div className="grid grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <div className="flex justify-between items-center text-sm font-medium text-gray-700 mb-2">
                         <label>Frame Rate</label>
@@ -353,14 +353,14 @@ export default function VideoToGif() {
         )}
 
         {/* Info Section Below Tool */}
-        <div className="mt-32 pt-16 border-t border-gray-100">
-          <div className="text-center mb-16">
+        <div className="mt-16 md:mt-32 pt-12 md:pt-16 border-t border-gray-100">
+          <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Use Our Video to GIF Maker?</h2>
             <p className="text-gray-500 max-w-2xl mx-auto">Everything happens instantly in your browser. No sketchy server uploads, no waiting in queues, and absolutely zero compromises on quality.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-            <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16 md:mb-24">
+            <div className="bg-white p-6 md:p-8 rounded-3xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
               <div className="w-12 h-12 bg-purple-50 text-purple-500 rounded-2xl flex items-center justify-center mb-6">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
               </div>
@@ -368,7 +368,7 @@ export default function VideoToGif() {
               <p className="text-gray-500 text-sm leading-relaxed">Your files never leave your device. Our WebAssembly engine processes the video entirely within your local browser, guaranteeing absolute privacy.</p>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+            <div className="bg-white p-6 md:p-8 rounded-3xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
               <div className="w-12 h-12 bg-pink-50 text-pink-500 rounded-2xl flex items-center justify-center mb-6">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
               </div>
@@ -376,7 +376,7 @@ export default function VideoToGif() {
               <p className="text-gray-500 text-sm leading-relaxed">No need to upload massive 100MB videos to a slow server. Since everything runs locally, conversions happen at the maximum speed your computer can handle.</p>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+            <div className="bg-white p-6 md:p-8 rounded-3xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
               <div className="w-12 h-12 bg-blue-50 text-blue-500 rounded-2xl flex items-center justify-center mb-6">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
               </div>
@@ -386,8 +386,8 @@ export default function VideoToGif() {
           </div>
           
           {/* FAQ Section */}
-          <div className="max-w-3xl mx-auto bg-gray-50 rounded-[2rem] p-10 border border-gray-100">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h3>
+          <div className="max-w-3xl mx-auto bg-gray-50 rounded-[2rem] p-6 md:p-10 border border-gray-100">
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 md:mb-8 text-center">Frequently Asked Questions</h3>
             <div className="space-y-6">
               <div>
                 <h4 className="font-bold text-gray-900 mb-2">Is this tool actually free?</h4>

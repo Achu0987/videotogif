@@ -111,11 +111,11 @@ export default function GifToVideo() {
   };
 
   return (
-    <div className="flex flex-col items-center py-12 px-4 selection:bg-blue-100 w-full font-sans">
+    <div className="flex flex-col items-center py-8 md:py-12 px-4 selection:bg-blue-100 w-full font-sans">
       <div className="max-w-5xl w-full">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tight text-gray-900">
+        <div className="text-center mb-8 md:mb-12">
+          <h1 className="text-3xl md:text-5xl font-black mb-3 md:mb-4 tracking-tight text-gray-900">
             Convert GIF to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">Video</span>
           </h1>
           <p className="text-gray-500 text-lg">Turn heavy animated GIFs into perfectly optimized MP4s for social media.</p>
@@ -127,7 +127,7 @@ export default function GifToVideo() {
             <p className="text-blue-500 font-medium animate-pulse">{loadingMsg}</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
             
             {/* Left Column: Upload */}
             <div className="space-y-6">
@@ -138,7 +138,7 @@ export default function GifToVideo() {
                   onChange={handleGifUpload} 
                   className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
                 />
-                <div className="p-12 text-center flex flex-col items-center justify-center h-full min-h-[400px]">
+                <div className="p-6 md:p-12 text-center flex flex-col items-center justify-center h-full min-h-[300px] md:min-h-[400px]">
                   {gifUrl ? (
                     <img 
                       src={gifUrl} 
@@ -161,7 +161,7 @@ export default function GifToVideo() {
 
               {/* Action Area */}
               {gifFile && (
-                <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm">
+                <div className="bg-white rounded-3xl p-5 md:p-6 border border-gray-100 shadow-sm">
                   <div className="flex flex-col gap-3">
                     <button 
                       onClick={convertToVideo}
@@ -211,8 +211,8 @@ export default function GifToVideo() {
             {/* Right Column: Settings & Result */}
             <div className="space-y-6">
               
-              <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm relative overflow-hidden group">
-                <h2 className="text-xl font-bold mb-6 text-gray-900 flex items-center gap-2">
+              <div className="bg-white rounded-3xl p-5 md:p-8 border border-gray-100 shadow-sm relative overflow-hidden group">
+                <h2 className="text-xl font-bold mb-5 md:mb-6 text-gray-900 flex items-center gap-2">
                   <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -290,14 +290,14 @@ export default function GifToVideo() {
         )}
         
         {/* Info Section Below Tool */}
-        <div className="mt-32 pt-16 border-t border-gray-100">
-          <div className="text-center mb-16">
+        <div className="mt-16 md:mt-32 pt-12 md:pt-16 border-t border-gray-100">
+          <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Convert GIF to MP4?</h2>
             <p className="text-gray-500 max-w-2xl mx-auto">GIFs are notorious for massive file sizes. Converting them to MP4 can reduce the file size by over 90%, making them perfect for Instagram, Twitter, and fast web loading.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12">
+            <div className="bg-white p-6 md:p-8 rounded-3xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
               <div className="w-12 h-12 bg-blue-50 text-blue-500 rounded-2xl flex items-center justify-center mb-6">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" /></svg>
               </div>
@@ -305,7 +305,7 @@ export default function GifToVideo() {
               <p className="text-gray-500 text-sm leading-relaxed">MP4 uses H.264 compression which is infinitely more efficient than the 30-year-old GIF format. Save your bandwidth.</p>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+            <div className="bg-white p-6 md:p-8 rounded-3xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
               <div className="w-12 h-12 bg-cyan-50 text-cyan-500 rounded-2xl flex items-center justify-center mb-6">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" /></svg>
               </div>
@@ -313,7 +313,7 @@ export default function GifToVideo() {
               <p className="text-gray-500 text-sm leading-relaxed">Instagram and TikTok do not support direct GIF uploads. Convert your GIFs to MP4 to post them effortlessly on any social platform.</p>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+            <div className="bg-white p-6 md:p-8 rounded-3xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
               <div className="w-12 h-12 bg-indigo-50 text-indigo-500 rounded-2xl flex items-center justify-center mb-6">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
               </div>

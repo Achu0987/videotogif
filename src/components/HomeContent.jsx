@@ -4,7 +4,7 @@ export default function HomeContent({ setActiveTab }) {
   return (
     <div className="w-full bg-[#fafafa] min-h-screen font-sans text-gray-900 pb-20">
       {/* Hero Section */}
-      <div className="max-w-5xl mx-auto px-6 pt-20 pb-16 text-center">
+      <div className="max-w-5xl mx-auto px-4 md:px-6 pt-12 md:pt-20 pb-12 md:pb-16 text-center">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-50 text-red-500 font-medium text-sm mb-8 border border-red-100">
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -12,7 +12,7 @@ export default function HomeContent({ setActiveTab }) {
           Fast, Free, and No Registration Required
         </div>
         
-        <h1 className="text-5xl md:text-6xl font-black tracking-tight mb-4 text-gray-900">
+        <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-4 text-gray-900">
           Download High Quality <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-orange-500 to-pink-500">
             Video Conversions
@@ -26,7 +26,7 @@ export default function HomeContent({ setActiveTab }) {
       </div>
 
       {/* Tools Cards */}
-      <div className="max-w-4xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+      <div className="max-w-4xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-16 md:mb-24">
         {/* Card 1 */}
         <div 
           onClick={() => setActiveTab('videotogif')}
@@ -62,7 +62,7 @@ export default function HomeContent({ setActiveTab }) {
       </div>
 
       {/* How it works */}
-      <div className="max-w-5xl mx-auto px-6 mb-24">
+      <div className="max-w-5xl mx-auto px-4 md:px-6 mb-16 md:mb-24">
         <h2 className="text-3xl font-bold mb-2 text-gray-900">How to Convert Media</h2>
         <p className="text-gray-500 mb-10">Follow these 3 simple steps to extract and download video content instantly from your computer or phone.</p>
         
@@ -97,7 +97,7 @@ export default function HomeContent({ setActiveTab }) {
       </div>
 
       {/* Pricing */}
-      <div className="max-w-5xl mx-auto px-6 mb-24">
+      <div className="max-w-5xl mx-auto px-4 md:px-6 mb-16 md:mb-24">
         <h2 className="text-3xl font-bold mb-2 text-gray-900">Simple, Transparent Pricing</h2>
         <p className="text-gray-500 mb-10">Start converting for free, or upgrade to a VIP pass for unrestricted batch features.</p>
         
@@ -202,7 +202,7 @@ export default function HomeContent({ setActiveTab }) {
       </div>
 
       {/* Features Bottom */}
-      <div className="max-w-5xl mx-auto px-6 border-t border-gray-200 pt-16">
+      <div className="max-w-5xl mx-auto px-4 md:px-6 border-t border-gray-200 pt-12 md:pt-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex gap-4">
             <div className="w-12 h-12 rounded-xl bg-teal-50 text-teal-500 flex items-center justify-center shrink-0">

@@ -1,11 +1,11 @@
 export default function Footer() {
   return (
     <footer className="w-full bg-[#fafafa] border-t border-gray-200 mt-auto">
-      <div className="max-w-5xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-start text-[13px] text-gray-500 font-sans">
+      <div className="max-w-5xl mx-auto px-4 md:px-6 py-8 md:py-10 flex flex-col md:flex-row justify-between items-start text-[13px] text-gray-500 font-sans gap-8 md:gap-0">
         
         {/* Left Side */}
-        <div className="mb-8 md:mb-0 text-left">
-          <p className="font-bold text-gray-900 text-base mb-3">CodeLove Downloader Portal</p>
+        <div className="text-left">
+          <p className="font-bold text-gray-900 text-base mb-3">CodeLove Converter Portal</p>
           <p className="mb-1 leading-relaxed">Disclaimer: We do not store, host, or crawl copyrighted social media content.</p>
           <p className="leading-relaxed">All files belong to their respective uploaders.</p>
         </div>
